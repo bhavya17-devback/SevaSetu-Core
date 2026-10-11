@@ -1,3 +1,6 @@
+const dns = require("node:dns");
+dns.setServers(["8.8.8.8"]);
+
 /**
  * Populates the Category and Subcategory collections.
  *
