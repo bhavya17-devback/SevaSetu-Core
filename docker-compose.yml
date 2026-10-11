@@ -1,0 +1,71 @@
+# SevaSetu - full stack (MongoDB + API + website)
+#
+#   docker compose up -d --build
+#   docker compose --profile seed run --rm seed      # first time only
+#
+# Website:  http://localhost:${WEB_PORT:-8080}
+
+services:
+  mongo:
+    image: mongo:7.0
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER:?set MONGO_USER in .env}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD:?set MONGO_PASSWORD in .env}
+    volumes:
+      - mongo_data:/data/db
+    # Published on this computer only, so MongoDB Compass can connect.
+    # 27018 (not 27017) so it doesn't clash with a MongoDB already
+    # installed on your machine.
+    ports:
+      - "127.0.0.1:27018:27017"
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+
+  backend:
+    build: ./backend
+    restart: unless-stopped
+    depends_on:
+      mongo:
+        condition: service_healthy
+    environment:
+      PORT: 5000
+      TRUST_PROXY: 1
+      MONGO_URI: mongodb://${MONGO_USER}:${MONGO_PASSWORD}@mongo:27017/sevasetu?authSource=admin
+      JWT_SECRET: ${JWT_SECRET:?set JWT_SECRET in .env}
+      CLIENT_URL: ${CLIENT_URL:-http://localhost:8080}
+    # No "ports:" on purpose - only the website container talks to the API.
+
+  frontend:
+    build:
+      context: ./sevasetu
+      args:
+        REACT_APP_API_URL: /api
+    restart: unless-stopped
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "${WEB_PORT:-8080}:80"
+
+  # One-off job: creates the admin account and loads categories.
+  # Only runs when asked for:  docker compose --profile seed run --rm seed
+  seed:
+    build: ./backend
+    profiles: ["seed"]
+    depends_on:
+      mongo:
+        condition: service_healthy
+    environment:
+      MONGO_URI: mongodb://${MONGO_USER}:${MONGO_PASSWORD}@mongo:27017/sevasetu?authSource=admin
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-admin@sevasetu.com}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-admin@123}
+      ADMIN_NAME: ${ADMIN_NAME:-Administrator}
+    command: ["sh", "-c", "node scripts/seedAdmin.js && node scripts/seedCategories.js"]
+
+volumes:
+  mongo_data:

@@ -1,0 +1,39 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blueArc" x1="70" y1="470" x2="430" y2="390" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#174DFF"/>
+      <stop offset="1" stop-color="#00C6E8"/>
+    </linearGradient>
+    <linearGradient id="greenArc" x1="402" y1="392" x2="478" y2="83" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#08A93B"/>
+      <stop offset="1" stop-color="#C9ED00"/>
+    </linearGradient>
+    <linearGradient id="hand" x1="164" y1="330" x2="381" y2="401" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF4D00"/>
+      <stop offset="1" stop-color="#FFB800"/>
+    </linearGradient>
+    <linearGradient id="petalPink" x1="252" y1="90" x2="332" y2="280" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF3C9B"/>
+      <stop offset="1" stop-color="#C70066"/>
+    </linearGradient>
+    <linearGradient id="petalPurple" x1="330" y1="170" x2="292" y2="342" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8245E8"/>
+      <stop offset="1" stop-color="#1600A8"/>
+    </linearGradient>
+    <linearGradient id="petalCyan" x1="183" y1="167" x2="238" y2="316" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00D8FF"/>
+      <stop offset="1" stop-color="#0069B9"/>
+    </linearGradient>
+  </defs>
+  <path d="M38 258C73 397 179 478 304 477c107-1 174-59 201-151-66 93-153 128-251 120C151 438 80 363 38 258Z" fill="url(#blueArc)"/>
+  <path d="M333 448c77-35 119-105 139-190 17-74-5-142-78-194 48 64 57 128 41 191-18 72-56 131-102 193Z" fill="url(#greenArc)"/>
+  <path d="M132 344c48-35 91-43 139-21 34 16 62 34 96 29-28 33-79 67-144 67-42 0-75-25-91-75Z" fill="url(#hand)"/>
+  <path d="M210 376c53-3 105-27 139-58 11-10 26-28 42-29-17 35-60 77-112 95-27 9-51 8-69-8Z" fill="#FF7200" opacity=".8"/>
+  <path d="M251 289C211 223 181 133 125 111c57-22 116 4 147 55 24 39 22 78-21 123Z" fill="url(#petalPink)"/>
+  <path d="M260 292c-17-89 9-155 73-205 19 72-2 141-73 205Z" fill="url(#petalPurple)"/>
+  <path d="M258 292c-40-65-77-85-120-104 8 83 53 122 120 104Z" fill="url(#petalCyan)"/>
+  <path d="M266 289c45-46 93-62 152-48-51 18-91 65-113 126-22-22-31-48-39-78Z" fill="#EF299D"/>
+  <circle cx="245" cy="68" r="33" fill="#FA087A"/>
+  <circle cx="137" cy="135" r="27" fill="#008DE7"/>
+  <circle cx="355" cy="119" r="29" fill="#6324D0"/>
+</svg>

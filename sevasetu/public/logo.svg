@@ -1,0 +1,19 @@
+<svg width="256" height="256" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sevaGrad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="55%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#0d9488"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="url(#sevaGrad)"/>
+  <path d="M32 34.5s-10.2-6.1-10.2-11.1a5 5 0 0 1 10.2-2.1 5 5 0 0 1 10.2 2.1c0 5-10.2 11.1-10.2 11.1Z" fill="#ffffff"/>
+  <rect x="9" y="38.5" width="46" height="4.2" rx="2.1" fill="#ffffff"/>
+  <path d="M12 52.5C12 40.6 21 33.5 32 33.5s20 7.1 20 19" stroke="#ffffff" stroke-width="3.4" stroke-linecap="round" opacity="0.55"/>
+  <rect x="18.5" y="42.5" width="3.4" height="10" rx="1.7" fill="#ffffff" opacity="0.8"/>
+  <rect x="42.1" y="42.5" width="3.4" height="10" rx="1.7" fill="#ffffff" opacity="0.8"/>
+  <circle cx="12" cy="40.6" r="5" fill="#ffffff"/>
+  <circle cx="52" cy="40.6" r="5" fill="#ffffff"/>
+  <circle cx="12" cy="40.6" r="2.1" fill="#f97316"/>
+  <circle cx="52" cy="40.6" r="2.1" fill="#0d9488"/>
+</svg>

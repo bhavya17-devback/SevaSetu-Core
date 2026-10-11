@@ -1,0 +1,166 @@
+/* =========================================================
+   NGO SCREENS
+   ========================================================= */
+
+.ngo-hero {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  padding: 30px 34px;
+  margin-bottom: 26px;
+  color: #fff;
+  background: linear-gradient(120deg, #0f172a, #0f766e 58%, #14b8a6);
+}
+
+.ngo-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1400&q=80");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.18;
+  mix-blend-mode: luminosity;
+}
+
+.ngo-hero-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 26px;
+  flex-wrap: wrap;
+}
+
+.ngo-hero-id {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ngo-hero-avatar {
+  width: 62px;
+  height: 62px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  font-size: 1.55rem;
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  flex-shrink: 0;
+}
+
+.ngo-hero h2 {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+
+.ngo-hero-sub {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.9rem;
+}
+
+.ngo-hero-meta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.ngo-hero-meta span {
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 999px;
+  padding: 5px 14px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.ngo-verified {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #0f766e;
+  border-color: transparent !important;
+}
+
+/* ================= PROFILE PANEL ================= */
+
+.ngo-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 18px;
+}
+
+.ngo-profile-item small {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.ngo-profile-item strong {
+  font-size: 0.94rem;
+  font-weight: 600;
+  color: var(--ink-2);
+  word-break: break-word;
+}
+
+/* ================= COLUMNS ================= */
+
+.ngo-columns {
+  display: grid;
+  grid-template-columns: 1.55fr 1fr;
+  gap: 22px;
+  margin-bottom: 24px;
+}
+
+/* ================= CLAIM CARD EXTRAS ================= */
+
+.ngo-contact-box {
+  background: var(--teal-soft);
+  border: 1px dashed #99f6e4;
+  border-radius: var(--radius-sm);
+  padding: 13px 15px;
+  font-size: 0.85rem;
+  color: #115e59;
+  line-height: 1.65;
+}
+
+.ngo-contact-box strong {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  color: #0f766e;
+}
+
+.ngo-locked-box {
+  background: var(--canvas);
+  border: 1px dashed var(--line);
+  border-radius: var(--radius-sm);
+  padding: 12px 15px;
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 1100px) {
+  .ngo-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .ngo-hero {
+    padding: 22px;
+  }
+
+  .ngo-hero h2 {
+    font-size: 1.25rem;
+  }
+}

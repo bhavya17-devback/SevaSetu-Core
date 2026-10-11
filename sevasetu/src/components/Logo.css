@@ -1,0 +1,51 @@
+.seva-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.seva-logo-mark {
+  flex-shrink: 0;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 14px rgba(23, 77, 255, 0.2));
+}
+
+.seva-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.seva-logo-text strong {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+}
+
+.seva-logo-text strong span {
+  color: #f97316;
+}
+
+.seva-logo-text small {
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.seva-logo.light .seva-logo-text strong {
+  color: #ffffff;
+}
+
+.seva-logo.light .seva-logo-text strong span {
+  color: #fbbf24;
+}
+
+.seva-logo.light .seva-logo-text small {
+  color: rgba(255, 255, 255, 0.72);
+}

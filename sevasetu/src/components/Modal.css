@@ -1,0 +1,79 @@
+.sv-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(15, 23, 42, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: sv-modal-fade 0.15s ease;
+}
+
+.sv-modal {
+  width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.28);
+  max-height: calc(100vh - 40px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: sv-modal-pop 0.18s ease;
+}
+
+.sv-modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 22px;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.sv-modal-head h3 {
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.sv-modal-x {
+  border: none;
+  background: #f1f5f9;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.sv-modal-x:hover {
+  background: #e2e8f0;
+}
+
+.sv-modal-body {
+  padding: 20px 22px;
+  overflow-y: auto;
+}
+
+.sv-modal-foot {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 14px 22px 18px;
+  border-top: 1px solid #eef2f7;
+}
+
+.sv-modal-body .sv-field + .sv-field {
+  margin-top: 14px;
+}
+
+@keyframes sv-modal-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes sv-modal-pop {
+  from { opacity: 0; transform: translateY(10px) scale(0.98); }
+  to { opacity: 1; transform: none; }
+}

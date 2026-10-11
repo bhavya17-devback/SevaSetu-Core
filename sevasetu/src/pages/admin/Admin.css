@@ -1,0 +1,268 @@
+/* ================= ADMIN SHELL ================= */
+
+.admin-shell {
+  background: #f1f5f9;
+}
+
+.admin-sidebar {
+  background: linear-gradient(180deg, #0f172a, #1e293b);
+  border-right: 1px solid #1e293b;
+}
+
+.admin-sidebar .sv-sidebar-head,
+.admin-sidebar .sv-sidebar-foot {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.admin-sidebar .sv-nav-item {
+  color: #94a3b8;
+}
+
+.admin-sidebar .sv-nav-item:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
+}
+
+.admin-sidebar .sv-nav-item.active {
+  background: rgba(249, 115, 22, 0.16);
+  color: #fdba74;
+}
+
+.admin-sidebar .sv-nav-label {
+  color: #64748b;
+}
+
+.admin-sidebar .sv-user-chip {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.admin-sidebar .sv-user-chip strong {
+  color: #fff;
+}
+
+.admin-sidebar .sv-user-chip small {
+  color: #94a3b8;
+}
+
+/* ================= PANELS ================= */
+
+.admin-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.admin-panel {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.admin-panel > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 14px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.admin-panel > header h2 {
+  font-size: 1.08rem;
+}
+
+.admin-panel > header span {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.admin-subhead {
+  font-size: 0.74rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 26px 0 14px;
+}
+
+.admin-muted {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* ================= PIPELINE ================= */
+
+.admin-pipeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.pipeline-item strong {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.pipeline-item span {
+  display: block;
+  font-size: 0.79rem;
+  color: var(--muted);
+  margin: 5px 0 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.pipeline-bar {
+  height: 6px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  overflow: hidden;
+}
+
+.pipeline-bar i {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+/* ================= CATEGORY BARS ================= */
+
+.admin-catbars {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.admin-catbar {
+  display: grid;
+  grid-template-columns: 170px 1fr 32px;
+  align-items: center;
+  gap: 14px;
+}
+
+.admin-catbar-label {
+  font-size: 0.84rem;
+  color: var(--ink-2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.admin-catbar-track {
+  height: 8px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  overflow: hidden;
+}
+
+.admin-catbar-track i {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+}
+
+.admin-catbar strong {
+  font-size: 0.87rem;
+  text-align: right;
+}
+
+/* ================= USER LIST ================= */
+
+.admin-userlist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.admin-userlist li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-userlist-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.admin-userlist-info strong {
+  display: block;
+  font-size: 0.89rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.admin-userlist-info small {
+  font-size: 0.77rem;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+/* ================= TABLE BITS ================= */
+
+.admin-cell-user {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.admin-cell-user strong {
+  display: block;
+  font-size: 0.89rem;
+}
+
+.admin-cell-user small {
+  display: block;
+  font-size: 0.75rem;
+}
+
+.admin-role {
+  display: inline-block;
+  padding: 4px 11px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.admin-role.donor {
+  background: var(--saffron-soft);
+  color: var(--saffron-dark);
+}
+
+.admin-role.ngo {
+  background: var(--teal-soft);
+  color: var(--teal-dark);
+}
+
+.admin-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1080px) {
+  .admin-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-catbar {
+    grid-template-columns: 130px 1fr 30px;
+  }
+}
